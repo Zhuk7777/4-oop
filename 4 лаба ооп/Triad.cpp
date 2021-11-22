@@ -71,3 +71,10 @@ std::ostream& operator<<(std::ostream& out, Triad& obj)
 	out << obj.first << " " << obj.second << " " << obj.third << "\n";
 	return out;
 }
+
+std::istream& operator>>(std::istream& in, Triad& obj)
+{
+	in >> obj.first;
+	in >> obj.second;
+	in >> obj.third;
+}
