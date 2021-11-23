@@ -17,8 +17,11 @@ public:
 	
 	void increaseByOneFirst();
 	void increaseByOneSecond();
-	void increaseByOneThird();
 	void increaseByOneAll();
+
+	void setFirst(int _first);
+	void setSecond(int _second);
+	void setThird(int _third);
 
 	friend std::ostream& operator<< (std::ostream& out, Date& obj);
 	friend std::istream& operator>> (std::istream& in, Date& obj);

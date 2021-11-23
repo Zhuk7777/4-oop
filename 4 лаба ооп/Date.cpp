@@ -47,17 +47,29 @@ void Date::increaseByOneSecond()
 	edit();
 }
 
-void Date::increaseByOneThird()
-{
-	third++;
-	edit();
-}
-
 void Date::increaseByOneAll()
 {
 	first++;
 	second++;
 	third++;
+	edit();
+}
+
+void Date::setFirst(int _first)
+{
+	first = _first;
+	edit();
+}
+
+void Date::setSecond(int _second)
+{
+	second = _second;
+	edit();
+}
+
+void Date::setThird(int _third)
+{
+	third = _third;
 	edit();
 }
 
@@ -147,9 +159,17 @@ std::ostream& operator<<(std::ostream& out, Date& obj)
 
 std::istream& operator>>(std::istream& in, Date& obj)
 {
-	in >> obj.first;
-	in >> obj.second;
-	in >> obj.third;
+	int number;
+
+	in >> number;
+	obj.setFirst(number);
+	in >> number;
+	obj.setSecond(number);
+	in >> number;
+	obj.setThird(number);
+
+	obj.edit();
+
 	return in;
 }
 

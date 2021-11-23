@@ -77,4 +77,5 @@ std::istream& operator>>(std::istream& in, Triad& obj)
 	in >> obj.first;
 	in >> obj.second;
 	in >> obj.third;
+	return in;
 }
