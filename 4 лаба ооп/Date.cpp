@@ -1,6 +1,6 @@
 #include "Date.h"
 
-Date::LEAPYEAR Date::lYear()
+LEAPYEAR Date::lYear()
 {
 	std::string year = std::to_string(third);
 	int size = year.size();
@@ -34,45 +34,6 @@ void Date::addNday(int n)
 	first += n;
 	edit();
 }
-
-void Date::increaseByOneFirst()
-{
-	first++;
-	edit();
-}
-
-void Date::increaseByOneSecond()
-{
-	second++;
-	edit();
-}
-
-void Date::increaseByOneAll()
-{
-	first++;
-	second++;
-	third++;
-	edit();
-}
-
-void Date::setFirst(int _first)
-{
-	first = _first;
-	edit();
-}
-
-void Date::setSecond(int _second)
-{
-	second = _second;
-	edit();
-}
-
-void Date::setThird(int _third)
-{
-	third = _third;
-	edit();
-}
-
 
 void Date::edit()
 {

@@ -2,11 +2,10 @@
 #include"Triad.h"
 #include<string>
 
+enum LEAPYEAR { LEAP, NOTLEAP };
+
 class Date :public Triad
 {
-	enum LEAPYEAR {LEAP,NOTLEAP};
-	LEAPYEAR lYear();
-	void edit();
 
 public:
 
@@ -15,13 +14,8 @@ public:
 
 	void addNday(int n);
 	
-	void increaseByOneFirst();
-	void increaseByOneSecond();
-	void increaseByOneAll();
-
-	void setFirst(int _first);
-	void setSecond(int _second);
-	void setThird(int _third);
+	LEAPYEAR lYear();
+	void edit();
 
 	friend std::ostream& operator<< (std::ostream& out, Date& obj);
 	friend std::istream& operator>> (std::istream& in, Date& obj);

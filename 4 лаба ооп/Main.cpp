@@ -65,18 +65,27 @@ int main()
 			std::cout << "¬ведите число\n";
 			std::cin >> number;
 			dAte.setFirst(number);
+
+			dAte.lYear();
+			dAte.edit();
 			break;
 
 		case 6:
 			std::cout << "¬ведите число\n";
 			std::cin >> number;
 			dAte.setSecond(number);
+
+			dAte.lYear();
+			dAte.edit();
 			break;
 
 		case 7:
 			std::cout << "¬ведите число\n";
 			std::cin >> number;
 			dAte.setThird(number);
+
+			dAte.lYear();
+			dAte.edit();
 			break;
 
 		case 8:
@@ -85,6 +94,9 @@ int main()
 
 		case 9:
 			dAte.increaseByOneAll();
+
+			dAte.lYear();
+			dAte.edit();
 			break;
 
 		case 10:
